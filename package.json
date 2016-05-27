@@ -1,0 +1,17 @@
+{
+  "name": "js_parse2",
+  "version": "1.0.0",
+  "description": "Sedview Web experiment",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
+  },
+  "author": "AJE",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^0.8.2",
+    "typings": "^1.0.4",
+    "webpack": "^1.13.1"
+  }
+}
