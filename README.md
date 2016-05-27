@@ -107,7 +107,7 @@ I'm not sure yet whether it's better to use the ruby version of SCSS or
 the NPM-based version. They both work fine. If the ruby one was actually a
 compiled binary I'd prefer that but it's not.
 
-The code has ``node-sass`` but you could swap in ruby ``sass`` by 1) removing
+The code has ``node-sass`` but you could swap in ruby ``sass`` by removing
 the entry for ``node-sass`` in ``package.json`` and updating ``modd.conf``.
 
 
