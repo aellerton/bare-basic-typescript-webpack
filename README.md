@@ -9,7 +9,7 @@ Built by Reading:
 - https://webpack.github.io/docs/configuration.html
 - https://github.com/webpack/docs/wiki/configuration
 - http://stackoverflow.com/questions/32155154/webpack-config-how-to-just-copy-the-index-html-to-the-dist-folder
-
+- https://github.com/sass/node-sass
 
 ## Preparing
 
