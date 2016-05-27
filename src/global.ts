@@ -1,2 +1,2 @@
-console.log('global.ts is now loaded...');
+console.log('global.ts is now loaded.');
 

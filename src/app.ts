@@ -1,3 +1,8 @@
-document.write('welcome to my app from typescript');
-console.log('typescript app loaded');
+import {Person} from './example';
+
+let p = new Person('Bart', 'Simpson');
+
+console.log('The typescript app is loaded...');
+
+document.write(`Message from ${p.name}: Typescript is working`);
 
