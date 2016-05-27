@@ -17,15 +17,15 @@ Built by Reading:
 - ensure node is installed
 - install typescript globally
 
-    npm install typescript -g 
+        npm install typescript -g 
 
 - install this (not in ``package.json`` by design):
 
-    npm install webpack-dev-server   # then...
+        npm install webpack-dev-server   # then...
 
 - install local modules
 
-    npm install
+        npm install
 
 
 ## Building and Running: The ``modd`` way
@@ -98,7 +98,7 @@ Then start the dev server:
 ## Building and Running: The ``npm`` watch-and-live-reload way
 
 
-    npm watch   # runs dev server with reload
+    npm watch   # runs dev server with reload ... not as reliable as modd
 
 
 ## SASS
