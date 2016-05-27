@@ -1,6 +1,6 @@
 # Bare typescript + webpack starter
 
-A basic and bare example of webpack packaging typescript into a js bundle.
+A bare starter example using webpack to package typescript into a js bundle.
 
 Built by Reading:
 
@@ -27,42 +27,81 @@ Built by Reading:
     npm install
 
 
-## Building and Running: The direct CTL way
+## Building and Running: The ``modd`` way
 
-Plain commands like:
+My personal favourite because it is the fastest and most reliable, at
+least so far.
 
-    ./node_modules/.bin/webpack  # TODO: need?
+First, install ``devd`` and ``modd``. 
 
-    ./node_modules/.bin/webpack-dev-server -dev-server --content-base=./dist --inline
-
-Then load http://localhost:8080/
-
-
-## Building and Running: The ``npm`` way
-
-    npm run start  # runs webpack-dev-server and watches for changes
-
-
-
-## Building and Running: The ``devd`` way
-
-Install ``devd`` and ``modd``. Then:
+Then run:
 
     modd
 
-That will run through the initial setup and run devd. If ``modd.conf``
-runs ``devd`` with the ``-o`` flag, the browser will automatically be opened.
-If that's annoying, remove the ``-o`` flag from the config file.
+This does everything - invokes webpack, copies HTML, starts ``devd``.
 
-If you don't want ``devd`` to run automatically, remove the entry from
-the config file and run in another shell:
+Additional tips...
+
+- If ``modd.conf`` runs ``devd`` with the ``-o`` flag, the browser will 
+  automatically be opened.  If that's annoying, remove the ``-o`` flag 
+  from the config file.
+
+- If you don't want ``devd`` to run automatically, remove the entry from
+  the config file altogether and run in another shell:
 
     devd -l ./dist
 
-Then load http://devd.io:8000/
+  Then load http://devd.io:8000/
 
 
-## Cleanup
+
+## Building and Running: The laborious CLI way
+
+This will compile and package typescript - but won't copy HTML:
+
+    ./node_modules/.bin/webpack
+
+Copy the HTML manually (I know, ugly):
+
+    cp src/*.html dist/
+
+And run 
+
+    ./node_modules/.bin/webpack-dev-server -dev-server --content-base=./dist
+
+Then load [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/)
+
+
+## Building and Running: The less labourious CLI way
+
+This runs the dev server and is meant to rebuild and reload on changes:
+
+    ./node_modules/.bin/webpack-dev-server -dev-server --content-base=./dist --watch
+
+Only thing is, I don't find it to be very reliable! It rebuilds and even
+reloads - but has old content! Oops.
+
+
+## Building and Running: The ``npm`` build-and-manually-reload way
+
+Build with:
+
+    npm run build   # runs webpack and copies HTML
+
+Then start the dev server:
+
+    npm run devserver   # runs webpack-dev-server
+
+
+
+## Building and Running: The ``npm`` watch-and-live-reload way
+
+
+    npm watch   # runs dev server with reload
+
+
+
+## Clean up the skeleton for a real project
 
 If you don't want any use of ``devd`` remove the ``modd.conf`` file.
 

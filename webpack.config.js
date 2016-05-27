@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var failPlugin = require('webpack-fail-plugin');
 
 module.exports = {
@@ -7,6 +8,7 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
     failPlugin
   ],
 
