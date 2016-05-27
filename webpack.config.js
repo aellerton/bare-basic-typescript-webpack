@@ -1,8 +1,14 @@
+var failPlugin = require('webpack-fail-plugin');
+
 module.exports = {
   entry: ["./src/global.ts", "./src/app.ts"],
   output: {
     filename: "dist/bundle.js"
   },
+
+  plugins: [
+    failPlugin
+  ],
 
   resolve: {
     //extensions: ['', '.js', '.es6']

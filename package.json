@@ -12,6 +12,7 @@
   "devDependencies": {
     "ts-loader": "^0.8.2",
     "typings": "^1.0.4",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-fail-plugin": "^1.0.4"
   }
 }
