@@ -1,7 +1,8 @@
 {
-  "name": "js_parse2",
+  "name": "bare-basic-typescript-webpack",
   "version": "1.0.0",
-  "description": "Sedview Web experiment",
+  "description": "A bare starter example using webpack to package typescript into a js bundle.",
+  "repository": "https://github.com/aellerton/bare-basic-typescript-webpack",
   "main": "bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
